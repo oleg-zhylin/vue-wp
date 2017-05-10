@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>wp</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <nav class="btn-group">
+          <router-link to="/" class="btn btn-primary">home</router-link>
+          <router-link to="/profile" v-if="authorize == 'enable'" class="btn btn-primary"> Profile</router-link>
+          <router-link to="/articles" v-if="authorize == 'enable'" class="btn btn-primary"> Articles</router-link>
+          <button type="button" class="btn btn-primary" @click="showLoginForm()" v-if="authorize == 'disable'">Войти</button>
+        </nav>
+        <router-view @unauthorized="showLoginForm()" @close-login-form="closeLoginForm" @login-success="loginSuccess()" ></router-view>
+      </div>
+    </div>
+    <script src="/dist/build.js"></script>
+  </body>
+</html>
