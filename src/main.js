@@ -12,7 +12,7 @@ import LoginForm from './pages/Login-form.vue';
 Vue.use(VueRouter);
 
 Vue.use(VueResource);
-
+//kehfh;owehgpoqrgihoe;gheo;rghe;ofgjhqreugho[weiyq[j mn kjbqi uqpiurpw]]
 var router = new VueRouter({
     routes: [
         {
